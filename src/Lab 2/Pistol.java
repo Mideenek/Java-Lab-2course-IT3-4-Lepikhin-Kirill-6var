@@ -1,3 +1,4 @@
+//Задание 5 задача 1
 public class Pistol {
     private int ammo;
 
