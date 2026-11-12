@@ -40,22 +40,30 @@ public class Main {
         Pistol pistol = new Pistol(7);
         System.out.println("Создан " + pistol);
 
+        System.out.println("Заряжаем 3 патрона...");
         pistol.reload(3);
+        System.out.println("Состояние: " + pistol);
 
+        System.out.println("Стреляем 5 раз:");
         for (int i = 0; i < 5; i++) {
             pistol.shoot();
         }
 
         System.out.println("Заряжаем 8 патронов, вернули лишних: " + pistol.reload(8));
 
+        System.out.println("Стреляем ещё 2 раза:");
         for (int i = 0; i < 2; i++) {
             pistol.shoot();
         }
 
         System.out.println("Разрядили, изъято патронов: " + pistol.unload());
+
+        System.out.println("Контрольный выстрел:");
         pistol.shoot();
 
         System.out.println();
+        System.out.println("--- Дополнительная проверка: свой пистолет (ввод с клавиатуры) ---");
+
         int capacity = InputUtil.readInt("Введи вместимость своего пистолета: ");
 
         Pistol my;
